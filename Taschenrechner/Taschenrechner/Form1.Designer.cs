@@ -47,6 +47,8 @@
             this.Minus = new System.Windows.Forms.Button();
             this.Rechnen = new System.Windows.Forms.Button();
             this.Error = new System.Windows.Forms.Label();
+            this.Binär = new System.Windows.Forms.Button();
+            this.ZusatzAnzeige = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Anzeige
@@ -191,6 +193,7 @@
             this.Plus.TabIndex = 13;
             this.Plus.Text = "+";
             this.Plus.UseVisualStyleBackColor = true;
+            this.Plus.Click += new System.EventHandler(this.RO_Click);
             // 
             // Division
             // 
@@ -201,6 +204,7 @@
             this.Division.TabIndex = 14;
             this.Division.Text = "/";
             this.Division.UseVisualStyleBackColor = true;
+            this.Division.Click += new System.EventHandler(this.RO_Click);
             // 
             // Multiplikation
             // 
@@ -211,6 +215,7 @@
             this.Multiplikation.TabIndex = 15;
             this.Multiplikation.Text = "*";
             this.Multiplikation.UseVisualStyleBackColor = true;
+            this.Multiplikation.Click += new System.EventHandler(this.RO_Click);
             // 
             // Minus
             // 
@@ -221,6 +226,7 @@
             this.Minus.TabIndex = 16;
             this.Minus.Text = "-";
             this.Minus.UseVisualStyleBackColor = true;
+            this.Minus.Click += new System.EventHandler(this.RO_Click);
             // 
             // Rechnen
             // 
@@ -231,6 +237,7 @@
             this.Rechnen.TabIndex = 17;
             this.Rechnen.Text = "=";
             this.Rechnen.UseVisualStyleBackColor = true;
+            this.Rechnen.Click += new System.EventHandler(this.Ergebnis);
             // 
             // Error
             // 
@@ -240,11 +247,36 @@
             this.Error.Size = new System.Drawing.Size(0, 13);
             this.Error.TabIndex = 18;
             // 
+            // Binär
+            // 
+            this.Binär.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Binär.Location = new System.Drawing.Point(443, 133);
+            this.Binär.Name = "Binär";
+            this.Binär.Size = new System.Drawing.Size(79, 39);
+            this.Binär.TabIndex = 19;
+            this.Binär.Text = "Binär";
+            this.Binär.UseVisualStyleBackColor = true;
+            this.Binär.Click += new System.EventHandler(this.Binär_Click);
+            // 
+            // ZusatzAnzeige
+            // 
+            this.ZusatzAnzeige.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ZusatzAnzeige.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ZusatzAnzeige.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ZusatzAnzeige.Location = new System.Drawing.Point(60, 55);
+            this.ZusatzAnzeige.MinimumSize = new System.Drawing.Size(500, 10);
+            this.ZusatzAnzeige.Name = "ZusatzAnzeige";
+            this.ZusatzAnzeige.Size = new System.Drawing.Size(500, 26);
+            this.ZusatzAnzeige.TabIndex = 20;
+            this.ZusatzAnzeige.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 378);
+            this.Controls.Add(this.ZusatzAnzeige);
+            this.Controls.Add(this.Binär);
             this.Controls.Add(this.Error);
             this.Controls.Add(this.Rechnen);
             this.Controls.Add(this.Minus);
@@ -293,6 +325,8 @@
         private System.Windows.Forms.Button Minus;
         private System.Windows.Forms.Button Rechnen;
         private System.Windows.Forms.Label Error;
+        private System.Windows.Forms.Button Binär;
+        private System.Windows.Forms.Label ZusatzAnzeige;
     }
 }
 

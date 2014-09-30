@@ -5,3 +5,4 @@ C:\Users\Martin\Documents\GitHub\CSHARP-Taschenrechner\Taschenrechner\Taschenrec
 C:\Users\Martin\Documents\GitHub\CSHARP-Taschenrechner\Taschenrechner\Taschenrechner\obj\x86\Debug\Taschenrechner.csproj.GenerateResource.Cache
 C:\Users\Martin\Documents\GitHub\CSHARP-Taschenrechner\Taschenrechner\Taschenrechner\obj\x86\Debug\Taschenrechner.exe
 C:\Users\Martin\Documents\GitHub\CSHARP-Taschenrechner\Taschenrechner\Taschenrechner\obj\x86\Debug\Taschenrechner.pdb
+C:\Users\Martin\Documents\GitHub\CSHARP-Taschenrechner\Taschenrechner\Taschenrechner\obj\x86\Debug\Taschenrechner.csprojResolveAssemblyReference.cache

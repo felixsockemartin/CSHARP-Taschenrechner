@@ -68,6 +68,7 @@ namespace Taschenrechner
                 }
                 Anzeige.Text = "0";
             }
+                ZusatzAnzeige.Text = ZusatzAnzeige.Text + temp1 + ((Button)sender).Text;
         }
 
         private void Ergebnis(object sender, EventArgs e)
@@ -76,9 +77,35 @@ namespace Taschenrechner
             {
                 Error.Text = "Es ist ein Fehler aufgetreten.";
             }
-            
+            switch (RO)
+            {
+                case '+':
+                    ergebnis = temp1 + temp2;
+                    break;
 
+                case '-':
+                    ergebnis = temp1 - temp2;
+                    break;
+
+                case '*':
+                    ergebnis = temp1 * temp2;
+                    break;
+
+                case '/':
+                    ergebnis = temp1 / temp2;
+                    break;
+            }
+            Anzeige.Text = "" + ergebnis;
             RO = 'n';
+            if (((Button)sender).Text == "=")
+            {
+                ZusatzAnzeige.Text = "";
+            }
+        }
+
+        private void Binär_Click(object sender, EventArgs e)
+        {
+            Anzeige.Text = Convert.ToString(Convert.ToInt64(Anzeige.Text), 2);
         }
     }
 }
