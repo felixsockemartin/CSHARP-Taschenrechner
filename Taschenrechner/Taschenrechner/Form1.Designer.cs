@@ -41,6 +41,12 @@
             this.Komma = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
+            this.Plus = new System.Windows.Forms.Button();
+            this.Division = new System.Windows.Forms.Button();
+            this.Multiplikation = new System.Windows.Forms.Button();
+            this.Minus = new System.Windows.Forms.Button();
+            this.Rechnen = new System.Windows.Forms.Button();
+            this.Error = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Anzeige
@@ -176,11 +182,75 @@
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.Form1_Load);
             // 
+            // Plus
+            // 
+            this.Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Plus.Location = new System.Drawing.Point(339, 133);
+            this.Plus.Name = "Plus";
+            this.Plus.Size = new System.Drawing.Size(46, 39);
+            this.Plus.TabIndex = 13;
+            this.Plus.Text = "+";
+            this.Plus.UseVisualStyleBackColor = true;
+            // 
+            // Division
+            // 
+            this.Division.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Division.Location = new System.Drawing.Point(391, 178);
+            this.Division.Name = "Division";
+            this.Division.Size = new System.Drawing.Size(46, 39);
+            this.Division.TabIndex = 14;
+            this.Division.Text = "/";
+            this.Division.UseVisualStyleBackColor = true;
+            // 
+            // Multiplikation
+            // 
+            this.Multiplikation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Multiplikation.Location = new System.Drawing.Point(339, 178);
+            this.Multiplikation.Name = "Multiplikation";
+            this.Multiplikation.Size = new System.Drawing.Size(46, 39);
+            this.Multiplikation.TabIndex = 15;
+            this.Multiplikation.Text = "*";
+            this.Multiplikation.UseVisualStyleBackColor = true;
+            // 
+            // Minus
+            // 
+            this.Minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Minus.Location = new System.Drawing.Point(391, 133);
+            this.Minus.Name = "Minus";
+            this.Minus.Size = new System.Drawing.Size(46, 39);
+            this.Minus.TabIndex = 16;
+            this.Minus.Text = "-";
+            this.Minus.UseVisualStyleBackColor = true;
+            // 
+            // Rechnen
+            // 
+            this.Rechnen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rechnen.Location = new System.Drawing.Point(339, 223);
+            this.Rechnen.Name = "Rechnen";
+            this.Rechnen.Size = new System.Drawing.Size(98, 39);
+            this.Rechnen.TabIndex = 17;
+            this.Rechnen.Text = "=";
+            this.Rechnen.UseVisualStyleBackColor = true;
+            // 
+            // Error
+            // 
+            this.Error.AutoSize = true;
+            this.Error.Location = new System.Drawing.Point(302, 313);
+            this.Error.Name = "Error";
+            this.Error.Size = new System.Drawing.Size(0, 13);
+            this.Error.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 378);
+            this.Controls.Add(this.Error);
+            this.Controls.Add(this.Rechnen);
+            this.Controls.Add(this.Minus);
+            this.Controls.Add(this.Multiplikation);
+            this.Controls.Add(this.Division);
+            this.Controls.Add(this.Plus);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.Komma);
@@ -198,6 +268,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -216,6 +287,12 @@
         private System.Windows.Forms.Button Komma;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button Plus;
+        private System.Windows.Forms.Button Division;
+        private System.Windows.Forms.Button Multiplikation;
+        private System.Windows.Forms.Button Minus;
+        private System.Windows.Forms.Button Rechnen;
+        private System.Windows.Forms.Label Error;
     }
 }
 

@@ -11,8 +11,8 @@ namespace Taschenrechner
 {
     public partial class Form1 : Form
     {
-        float temp1, temp2;
-
+        float temp1, temp2, ergebnis;
+        char RO = 'n';
 
         public Form1()
         {
@@ -45,7 +45,40 @@ namespace Taschenrechner
                 Anzeige.Text = Anzeige.Text + ((Button)sender).Text;
                 ((Button)sender).Visible = false;
             }
-        
+        }
+
+        private void RO_Click(object sender, EventArgs e)
+        {
+            if (RO == 'n')
+            {
+                RO = Convert.ToChar(((Button)sender).Text);
+                if (!(float.TryParse(Anzeige.Text, out temp1)))
+                {
+                    Error.Text = "Es ist ein Fehler aufgetreten.";
+                }
+                Anzeige.Text = "0";
+            }
+            else
+            {
+                Ergebnis((Button)sender, e);
+                RO = Convert.ToChar(((Button)sender).Text);
+                if (!(float.TryParse(Anzeige.Text, out temp1)))
+                {
+                    Error.Text = "Es ist ein Fehler aufgetreten.";
+                }
+                Anzeige.Text = "0";
+            }
+        }
+
+        private void Ergebnis(object sender, EventArgs e)
+        {
+            if (!(float.TryParse(Anzeige.Text, out temp2)))
+            {
+                Error.Text = "Es ist ein Fehler aufgetreten.";
+            }
+            
+
+            RO = 'n';
         }
     }
 }
