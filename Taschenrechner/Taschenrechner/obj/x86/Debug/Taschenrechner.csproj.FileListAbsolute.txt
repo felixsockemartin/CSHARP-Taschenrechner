@@ -1,0 +1,7 @@
+C:\Users\Martin\Documents\GitHub\CSHARP-Taschenrechner\Taschenrechner\Taschenrechner\bin\Debug\Taschenrechner.exe
+C:\Users\Martin\Documents\GitHub\CSHARP-Taschenrechner\Taschenrechner\Taschenrechner\bin\Debug\Taschenrechner.pdb
+C:\Users\Martin\Documents\GitHub\CSHARP-Taschenrechner\Taschenrechner\Taschenrechner\obj\x86\Debug\Taschenrechner.Form1.resources
+C:\Users\Martin\Documents\GitHub\CSHARP-Taschenrechner\Taschenrechner\Taschenrechner\obj\x86\Debug\Taschenrechner.Properties.Resources.resources
+C:\Users\Martin\Documents\GitHub\CSHARP-Taschenrechner\Taschenrechner\Taschenrechner\obj\x86\Debug\Taschenrechner.csproj.GenerateResource.Cache
+C:\Users\Martin\Documents\GitHub\CSHARP-Taschenrechner\Taschenrechner\Taschenrechner\obj\x86\Debug\Taschenrechner.exe
+C:\Users\Martin\Documents\GitHub\CSHARP-Taschenrechner\Taschenrechner\Taschenrechner\obj\x86\Debug\Taschenrechner.pdb
