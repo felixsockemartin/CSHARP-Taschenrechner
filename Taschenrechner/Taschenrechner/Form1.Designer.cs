@@ -49,6 +49,7 @@
             this.Error = new System.Windows.Forms.Label();
             this.Binär = new System.Windows.Forms.Button();
             this.ZusatzAnzeige = new System.Windows.Forms.Label();
+            this.Fakultät = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Anzeige
@@ -56,7 +57,7 @@
             this.Anzeige.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Anzeige.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Anzeige.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Anzeige.Location = new System.Drawing.Point(60, 25);
+            this.Anzeige.Location = new System.Drawing.Point(12, 25);
             this.Anzeige.MinimumSize = new System.Drawing.Size(500, 30);
             this.Anzeige.Name = "Anzeige";
             this.Anzeige.Size = new System.Drawing.Size(500, 30);
@@ -187,7 +188,7 @@
             // Plus
             // 
             this.Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Plus.Location = new System.Drawing.Point(339, 133);
+            this.Plus.Location = new System.Drawing.Point(244, 133);
             this.Plus.Name = "Plus";
             this.Plus.Size = new System.Drawing.Size(46, 39);
             this.Plus.TabIndex = 13;
@@ -198,7 +199,7 @@
             // Division
             // 
             this.Division.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Division.Location = new System.Drawing.Point(391, 178);
+            this.Division.Location = new System.Drawing.Point(296, 178);
             this.Division.Name = "Division";
             this.Division.Size = new System.Drawing.Size(46, 39);
             this.Division.TabIndex = 14;
@@ -209,7 +210,7 @@
             // Multiplikation
             // 
             this.Multiplikation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Multiplikation.Location = new System.Drawing.Point(339, 178);
+            this.Multiplikation.Location = new System.Drawing.Point(244, 178);
             this.Multiplikation.Name = "Multiplikation";
             this.Multiplikation.Size = new System.Drawing.Size(46, 39);
             this.Multiplikation.TabIndex = 15;
@@ -220,7 +221,7 @@
             // Minus
             // 
             this.Minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Minus.Location = new System.Drawing.Point(391, 133);
+            this.Minus.Location = new System.Drawing.Point(296, 133);
             this.Minus.Name = "Minus";
             this.Minus.Size = new System.Drawing.Size(46, 39);
             this.Minus.TabIndex = 16;
@@ -231,7 +232,7 @@
             // Rechnen
             // 
             this.Rechnen.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rechnen.Location = new System.Drawing.Point(339, 223);
+            this.Rechnen.Location = new System.Drawing.Point(244, 223);
             this.Rechnen.Name = "Rechnen";
             this.Rechnen.Size = new System.Drawing.Size(98, 39);
             this.Rechnen.TabIndex = 17;
@@ -250,7 +251,7 @@
             // Binär
             // 
             this.Binär.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Binär.Location = new System.Drawing.Point(443, 133);
+            this.Binär.Location = new System.Drawing.Point(348, 133);
             this.Binär.Name = "Binär";
             this.Binär.Size = new System.Drawing.Size(79, 39);
             this.Binär.TabIndex = 19;
@@ -263,18 +264,30 @@
             this.ZusatzAnzeige.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ZusatzAnzeige.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ZusatzAnzeige.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZusatzAnzeige.Location = new System.Drawing.Point(60, 55);
+            this.ZusatzAnzeige.Location = new System.Drawing.Point(12, 55);
             this.ZusatzAnzeige.MinimumSize = new System.Drawing.Size(500, 10);
             this.ZusatzAnzeige.Name = "ZusatzAnzeige";
             this.ZusatzAnzeige.Size = new System.Drawing.Size(500, 26);
             this.ZusatzAnzeige.TabIndex = 20;
             this.ZusatzAnzeige.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // Fakultät
+            // 
+            this.Fakultät.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fakultät.Location = new System.Drawing.Point(348, 178);
+            this.Fakultät.Name = "Fakultät";
+            this.Fakultät.Size = new System.Drawing.Size(79, 39);
+            this.Fakultät.TabIndex = 21;
+            this.Fakultät.Text = "!";
+            this.Fakultät.UseVisualStyleBackColor = true;
+            this.Fakultät.Click += new System.EventHandler(this.Fakultät_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(617, 378);
+            this.ClientSize = new System.Drawing.Size(528, 357);
+            this.Controls.Add(this.Fakultät);
             this.Controls.Add(this.ZusatzAnzeige);
             this.Controls.Add(this.Binär);
             this.Controls.Add(this.Error);
@@ -296,6 +309,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Anzeige);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -327,6 +342,7 @@
         private System.Windows.Forms.Label Error;
         private System.Windows.Forms.Button Binär;
         private System.Windows.Forms.Label ZusatzAnzeige;
+        private System.Windows.Forms.Button Fakultät;
     }
 }
 

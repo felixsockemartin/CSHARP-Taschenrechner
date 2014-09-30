@@ -49,26 +49,19 @@ namespace Taschenrechner
 
         private void RO_Click(object sender, EventArgs e)
         {
-            if (RO == 'n')
-            {
-                RO = Convert.ToChar(((Button)sender).Text);
-                if (!(float.TryParse(Anzeige.Text, out temp1)))
-                {
-                    Error.Text = "Es ist ein Fehler aufgetreten.";
-                }
-                Anzeige.Text = "0";
-            }
-            else
+            if (RO != 'n')
             {
                 Ergebnis((Button)sender, e);
-                RO = Convert.ToChar(((Button)sender).Text);
-                if (!(float.TryParse(Anzeige.Text, out temp1)))
-                {
-                    Error.Text = "Es ist ein Fehler aufgetreten.";
-                }
-                Anzeige.Text = "0";
             }
-                ZusatzAnzeige.Text = ZusatzAnzeige.Text + temp1 + ((Button)sender).Text;
+            RO = Convert.ToChar(((Button)sender).Text);
+            if (!(float.TryParse(Anzeige.Text, out temp1)))
+            {
+                Error.Text = "Es ist ein Fehler aufgetreten.";
+            }
+            Anzeige.Text = "0";
+            ZusatzAnzeige.Text = ZusatzAnzeige.Text + temp1 + ((Button)sender).Text;
+            Komma.Visible = true;
+            Fakultät.Visible = false;
         }
 
         private void Ergebnis(object sender, EventArgs e)
@@ -89,14 +82,17 @@ namespace Taschenrechner
 
                 case '*':
                     ergebnis = temp1 * temp2;
+                        Komma.Visible = ergebnis == Math.Round(ergebnis);
                     break;
 
                 case '/':
                     ergebnis = temp1 / temp2;
+                        Komma.Visible = ergebnis == Math.Round(ergebnis);
                     break;
             }
             Anzeige.Text = "" + ergebnis;
             RO = 'n';
+            Fakultät.Visible = true;
             if (((Button)sender).Text == "=")
             {
                 ZusatzAnzeige.Text = "";
@@ -106,6 +102,31 @@ namespace Taschenrechner
         private void Binär_Click(object sender, EventArgs e)
         {
             Anzeige.Text = Convert.ToString(Convert.ToInt64(Anzeige.Text), 2);
+        }
+
+        private void Fakultät_Click(object sender, EventArgs e)
+        {
+            long a, b = 0;
+            if (Komma.Visible)
+            {
+                a = Convert.ToInt64(Anzeige.Text);
+                b = a;
+                while (a != 0 && a != 1)
+                {
+                    a--;
+                    b = b * a;
+                }
+            }
+            else
+            {
+                Error.Text = "Syntax Error";
+            }
+            if (b < 0)
+            {
+                Error.Text = "Math Error";
+                b = 0;
+            }
+            Anzeige.Text = "" + b;
         }
     }
 }
