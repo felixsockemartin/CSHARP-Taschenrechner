@@ -49,6 +49,7 @@ namespace Taschenrechner
 
         private void RO_Click(object sender, EventArgs e)
         {
+            ZusatzAnzeige.Text = ZusatzAnzeige.Text + Anzeige.Text + ((Button)sender).Text;
             if (RO != 'n')
             {
                 Ergebnis((Button)sender, e);
@@ -59,7 +60,6 @@ namespace Taschenrechner
                 Error.Text = "Es ist ein Fehler aufgetreten.";
             }
             Anzeige.Text = "0";
-            ZusatzAnzeige.Text = ZusatzAnzeige.Text + temp1 + ((Button)sender).Text;
             Komma.Visible = true;
             Fakultät.Visible = false;
         }
